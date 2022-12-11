@@ -3,9 +3,9 @@ import React, { useState } from "react";
 
 export const Draggable = () => {
   const testCardItem = [
-    { label: "Card 1", id: 1 },
-    { label: "Card 2", id: 2 },
-    { label: "Card 3", id: 3 },
+    { label: "Estudar 3 horas", id: 1 },
+    { label: "Ir malhar", id: 2 },
+    { label: "Trabalhar", id: 3 },
   ];
 
   const [testItems, setTestItems] = useState(testCardItem);
@@ -15,8 +15,15 @@ export const Draggable = () => {
       {testItems.map((item) => {
         return (
           <Flex m="10px" key={item.id}>
-            <Container p="10px" textAlign="center" bgColor="#333" color="#fff">
-              <Text cursor="pointer" textDecor="underline">
+            <Container
+              _hover={{ bgColor: "#bbb" }}
+              p="10px"
+              textAlign="center"
+              borderRadius="6px"
+              bgColor="#fff"
+              color="#333"
+            >
+              <Text color="#333" fontSize="15px" cursor="pointer">
                 {item.label}
               </Text>
             </Container>

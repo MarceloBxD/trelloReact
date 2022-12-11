@@ -1,7 +1,11 @@
 import React from "react";
-import { Flex, Img } from "@chakra-ui/react";
+import { Container, Flex, Img } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFlip, Pagination, Navigation } from "swiper";
+import img1 from "../../assets/images/img1.jpg";
+import img2 from "../../assets/images/img2.jpg";
+import img3 from "../../assets/images/img3.jpg";
+import img4 from "../../assets/images/img4.jpg";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-flip";
@@ -9,31 +13,28 @@ import "swiper/css";
 
 export const Header = () => {
   return (
-    <Flex h="18vh" w="100%" justify="center">
+    <Flex h="120px" w="100%">
       <Swiper
-        width={1000}
         effect={"flip"}
         grabCursor={true}
         pagination={true}
         navigation={true}
         modules={[EffectFlip, Pagination, Navigation]}
       >
-        <SwiperSlide>
-          <Img
-            w="100%"
-            objectFit="cover"
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img w="100%" src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img w="100%" src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img w="100%" src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
+        <Flex bgColor="red">
+          <SwiperSlide>
+            <Img w="100%" objectFit="cover" src={img1} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Img src={img2} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Img objectFit="cover" src={img3} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Img objectFit="cover" src={img4} />
+          </SwiperSlide>
+        </Flex>
       </Swiper>
     </Flex>
   );

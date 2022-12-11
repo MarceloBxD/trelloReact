@@ -1,11 +1,14 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Button } from "@chakra-ui/react";
 import { Draggable } from "../Draggable";
 import React from "react";
 
 export const Droppable = () => {
   return (
-    <Flex w="80%" h="90%" mt="10px" border="1px solid #fff" borderRadius="5px">
+    <Flex flexDir="column" w="100%" h="90%" mt="10px">
       <Draggable />
+      <Button w="100%" opacity="0.6">
+        Adicionar um cartão
+      </Button>
     </Flex>
   );
 };
